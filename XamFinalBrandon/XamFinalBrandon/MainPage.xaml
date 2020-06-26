@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamFinalBrandon.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".5"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height=".2*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Image x:Name="theImage" Grid.Row="1" Margin="24" WidthRequest="640" HeightRequest="480"/>
+
+        <ActivityIndicator x:Name="theActivityIndicator" Grid.Row="2"/>
+
+        <ScrollView Grid.Row="3">
+            <Label x:Name="theResults" FontSize="16" HorizontalTextAlignment="Center"/>
+        </ScrollView>
+
+        <StackLayout Grid.Row="4" HorizontalOptions="Center" VerticalOptions="Center">
+            <Button x:Name="WebImageButton" Text="Web Image" Clicked="WebImageButton_Clicked" WidthRequest="200"/>
+            <Button x:Name="LocalImageButton" Text="Choose Image" Clicked="LocalImageButton_Clicked"  WidthRequest="200"/>
+            <Button x:Name="CameraButton" Text="Camera" Clicked="CameraButton_Clicked" WidthRequest="200" Margin="0,0,0,10"/>
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>
